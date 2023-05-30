@@ -1,7 +1,6 @@
-import createBigNews from "./big-news.js";
 import { createHTMLElement } from "./functions.js";
-import createSmallNews from "./small-news.js";
 import createBigButton from "./big-button.js";
+import createNewsData from "./news-data.js";
 
 function createNewsWrapper(bigNewsData, smallNewsData, title) {
     if (!title) {
@@ -14,8 +13,8 @@ function createNewsWrapper(bigNewsData, smallNewsData, title) {
 
     const newsList = createHTMLElement('div', 'news-list');
 
-    const bigNews = createBigNews(bigNewsData);
-    const smallNews = createSmallNews(smallNewsData);
+    const bigNews = createNewsData(bigNewsData, 'big-news');
+    const smallNews = createNewsData(smallNewsData, 'small-news', 'small');
 
     newsList.append(bigNews, smallNews);
 

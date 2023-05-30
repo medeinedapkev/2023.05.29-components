@@ -2,7 +2,7 @@ import createBigNews from "./big-news.js";
 import { createBigButton, createHTMLElement } from "./functions.js";
 import createSmallNews from "./small-news.js";
 
-function createNewsWrapper(title) {
+function createNewsWrapper(bigNewsData, smallNewsData, title) {
     if (!title) {
         return '';
     }
@@ -13,8 +13,8 @@ function createNewsWrapper(title) {
 
     const newsList = createHTMLElement('div', 'news-list');
 
-    const bigNews = createBigNews();
-    const smallNews = createSmallNews();
+    const bigNews = createBigNews(bigNewsData);
+    const smallNews = createSmallNews(smallNewsData);
 
     newsList.append(bigNews, smallNews);
 

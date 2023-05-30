@@ -1,8 +1,7 @@
 import { createNewsData } from "./functions.js";
-import { BIG_NEWS_DATA } from "./data.js";
 
-function createBigNews() {
-    const bigNewsElement = createNewsData(BIG_NEWS_DATA, 'big-news');
+function createBigNews(data) {
+    const bigNewsElement = createNewsData(data, 'big-news');
 
     return bigNewsElement;
 }

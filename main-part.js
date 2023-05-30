@@ -2,13 +2,13 @@ import { createHTMLElement } from "./functions.js";
 import createNewsWrapper from "./news-wrapper.js";
 import createVideoWrapper from "./video-wrapper.js";
 
-function createMainPart() {
+function createMainPart(bigNewsData, smallNewsData) {
     const mainPartElement = createHTMLElement('div', 'main-part');
 
     const newsElement = createHTMLElement('section', 'news');
     const videoElement = createHTMLElement('section', 'video');
 
-    const newsWrapper = createNewsWrapper('Naujienos');
+    const newsWrapper = createNewsWrapper(bigNewsData, smallNewsData, 'Naujienos');
     const videoWrapper = createVideoWrapper('Vaizdo įrašai');
 
     newsElement.append(newsWrapper);

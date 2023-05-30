@@ -1,4 +1,4 @@
-import { createHTMLElement } from "./functions.js";
+import { createBigButton, createHTMLElement } from "./functions.js";
 
 function createVideoWrapper() {
     const videoWrapper = createHTMLElement('div', 'video-wrapper');
@@ -9,15 +9,7 @@ function createVideoWrapper() {
     </iframe>
     <p class="motto">Jei galiu aš - gali ir tu!</p>`;
 
-    const bigButton = createHTMLElement('a');
-    bigButton.classList.add('button', 'big');
-    bigButton.href = 'https://codeacademy.lt/visos-naujienos/';
-
-    bigButton.innerHTML = 
-    `<span>Visi vaizdo įrašai</span>
-    <svg class="arrow-blue" xmlns="http://www.w3.org/2000/svg" width="20" height="33"><path fill="#1200FF" d="M3.264 32.528L.76 30.026l13.761-13.761L.762 2.504 3.263 0l16.263 16.264z" fill-rule="evenodd"></path></svg>`;
-
-
+    const bigButton = createBigButton('https://codeacademy.lt/visos-naujienos/', 'Visi vaizdo įrašai');
     videoWrapper.append(bigButton);
 
     return videoWrapper;

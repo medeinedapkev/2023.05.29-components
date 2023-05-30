@@ -23,7 +23,7 @@ function createSmallNewsData(data) {
         newsItem.classList.add('news-item', 'small');
 
         const imgElement = createHTMLElement('img');
-        imgElement.src = './' + img;
+        imgElement.src = 'assets/' + img;
 
         const newsInfoElement = createHTMLElement('div');
         newsInfoElement.classList.add('news-info', 'small');

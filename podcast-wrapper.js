@@ -14,7 +14,7 @@ function createPodcastWrapper(data) {
         const podcastPlay = createHTMLElement('div', 'podcast-play');
 
         const podcastPlayImg = createHTMLElement('img');
-        podcastPlayImg.src = './' + img;
+        podcastPlayImg.src = 'assets/' + img;
 
         const timeElement = createHTMLElement('p', 'time', time);
 

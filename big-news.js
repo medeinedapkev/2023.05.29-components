@@ -13,7 +13,6 @@ function createBigNewsData(data) {
     const bigNewsElement = createHTMLElement('div', 'big-news')
  
     data.map(item => {
-        console.log(item)
         let { href, img, category, title, date} = item;
 
         const linkToBigNews = createHTMLElement('a', 'news-pic');
@@ -22,7 +21,7 @@ function createBigNewsData(data) {
         const newsItemElement = createHTMLElement('div', 'news-item');
 
         const imgElement = createHTMLElement('img');
-        imgElement.src = './' + img;
+        imgElement.src = 'assets/' + img;
 
         const newsInfoElement = createHTMLElement('div', 'news-info');
 

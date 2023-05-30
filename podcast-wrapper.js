@@ -1,9 +1,13 @@
 import { createHTMLElement } from "./functions.js";
 
-function createPodcastWrapper(data) {
+function createPodcastWrapper(data, mainTitle) {
+    if (!data || !mainTitle) {
+        return '';
+    }
+
     const podcastWrapper = createHTMLElement('div', 'podcast-wrapper');
 
-    const podcastTitle = createHTMLElement('h2', 'title', 'Podcastai ir radijo laidos');
+    const podcastTitle = createHTMLElement('h2', 'title', mainTitle);
     podcastWrapper.append(podcastTitle);
 
     data.forEach(item => {

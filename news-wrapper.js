@@ -2,10 +2,14 @@ import createBigNews from "./big-news.js";
 import { createBigButton, createHTMLElement } from "./functions.js";
 import createSmallNews from "./small-news.js";
 
-function createNewsWrapper() {
+function createNewsWrapper(title) {
+    if (!title) {
+        return '';
+    }
+    
     const newsWrapperElement = createHTMLElement('div', 'news-wrapper');
 
-    const newsTitle = createHTMLElement('h1', 'title', 'Naujienos');
+    const newsTitle = createHTMLElement('h1', 'title', title);
 
     const newsList = createHTMLElement('div', 'news-list');
 

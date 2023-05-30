@@ -8,8 +8,8 @@ function createMainPart() {
     const newsElement = createHTMLElement('section', 'news');
     const videoElement = createHTMLElement('section', 'video');
 
-    const newsWrapper = createNewsWrapper();
-    const videoWrapper = createVideoWrapper();
+    const newsWrapper = createNewsWrapper('Naujienos');
+    const videoWrapper = createVideoWrapper('Vaizdo įrašai');
 
     newsElement.append(newsWrapper);
     videoElement.append(videoWrapper);

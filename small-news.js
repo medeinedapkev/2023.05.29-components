@@ -1,4 +1,4 @@
-import { SMALL_NEWS_DATA } from "./config.js";
+import { SMALL_NEWS_DATA } from "./data.js";
 import { createHTMLElement } from "./functions.js";
 
 function createSmallNews() {

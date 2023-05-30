@@ -1,9 +1,13 @@
 import { createBigButton, createHTMLElement } from "./functions.js";
 
-function createEventWrapper(data) {
+function createEventWrapper(data, mainTitle) {
+    if (!data || !mainTitle) {
+        return '';
+    }
+    
     const eventWrapper = createHTMLElement('div', 'event-wrapper');
 
-    const eventTitle = createHTMLElement('h2', 'title', 'Renginiai');
+    const eventTitle = createHTMLElement('h2', 'title', mainTitle);
     eventWrapper.append(eventTitle);
 
     data.forEach(item => {

@@ -1,5 +1,5 @@
 import { createHTMLElement } from "./functions.js";
-import { BIG_NEWS_DATA } from "./config.js";
+import { BIG_NEWS_DATA } from "./data.js";
 
 function createBigNews() {
     const bigNewsElement = createBigNewsData(BIG_NEWS_DATA);

@@ -1,6 +1,7 @@
 import createBigNews from "./big-news.js";
-import { createBigButton, createHTMLElement } from "./functions.js";
+import { createHTMLElement } from "./functions.js";
 import createSmallNews from "./small-news.js";
+import createBigButton from "./big-button.js";
 
 function createNewsWrapper(bigNewsData, smallNewsData, title) {
     if (!title) {

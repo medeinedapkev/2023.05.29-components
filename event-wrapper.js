@@ -1,4 +1,5 @@
-import { createBigButton, createHTMLElement } from "./functions.js";
+import { createHTMLElement } from "./functions.js";
+import createBigButton from "./big-button.js";
 
 function createEventWrapper(data, mainTitle) {
     if (!data || !mainTitle) {
